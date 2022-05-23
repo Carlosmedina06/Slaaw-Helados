@@ -1,0 +1,133 @@
+//contenedor
+@mixin contenedor($margin:190px) {
+    width: 80%;
+    margin: $margin auto
+}
+//Botones
+@mixin botonUno {
+    background: color(colorBlanco);
+    color: color(primario);
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 200px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+
+    span {
+        display: inline-block;
+        transform: skew(21deg);
+    }
+
+    &.btn-principal::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        left: 0;
+        background: color(primario);
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.5s;
+    }
+
+    &.btn-principal:hover {
+        color: color(colorBlanco);
+    }
+
+    &.btn-principal:hover::before {
+        left: 0;
+        right: 0;
+        opacity: 1;
+    }
+
+    &.btn-principal a:hover {
+        color: color(colorBlanco);
+    }
+}
+//Cards
+@mixin cardUno {
+    background: color(colorBlanco);
+    margin: .4em;
+    .carta__img {
+        background-color: color(colorBlanco);
+    }
+    .carta__category {
+        text-transform: uppercase;
+        font-size: 0.7em;
+        font-weight: 600;
+        color: color(secundario);
+        padding: 5px 7px 0;
+        &.card__category:hover {
+            cursor: pointer;
+        }
+    }
+    .carta__heading {
+        color: color(tercero);
+        padding: 7px;
+        &.carta__heading:hover {
+            cursor: pointer;
+        }
+    }
+}
+// Text formato //
+@mixin h1-style {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px
+}
+
+@mixin h2-style {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+@mixin h3-style {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+@mixin h4-style {
+    font-family: 'Libre Franklin', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+@mixin h5-style {
+    font-family: 'Libre Franklin', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+@mixin p-style {
+    font-family: 'Libre Franklin', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 21px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

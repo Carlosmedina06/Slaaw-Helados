@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-2",
+  "version": "1.0.0",
+  "description": "proyecto 2",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/main.scss ./css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carlosmedina06/Slaaw-Helados.git"
+  },
+  "author": "carlosmedina06",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Carlosmedina06/Slaaw-Helados/issues"
+  },
+  "homepage": "https://github.com/Carlosmedina06/Slaaw-Helados#readme"
+}

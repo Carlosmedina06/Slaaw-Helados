@@ -1,0 +1,295 @@
+@charset "UTF-8";
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  font-family: "Roboto", sans-serif;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.4em;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+h4 {
+  font-family: "Libre Franklin", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+h5 {
+  font-family: "Libre Franklin", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+p {
+  font-family: "Libre Franklin", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+.navbar a {
+  color: #FAFAFA;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar img {
+  width: 170px;
+}
+
+.footer {
+  background-color: #1d1412;
+  color: #FAFAFA;
+  padding: 20px;
+}
+.footer .footer__item {
+  display: inline-block;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.btn-principal {
+  background: #FAFAFA;
+  color: #006bb3;
+  border: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  width: 200px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skew(-21deg);
+}
+.btn-principal span {
+  display: inline-block;
+  transform: skew(21deg);
+}
+.btn-principal.btn-principal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: #006bb3;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+.btn-principal.btn-principal:hover {
+  color: #FAFAFA;
+}
+.btn-principal.btn-principal:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+.btn-principal.btn-principal a:hover {
+  color: #FAFAFA;
+}
+
+.carta {
+  background: #FAFAFA;
+  margin: 0.4em;
+}
+.carta .carta__img {
+  background-color: #FAFAFA;
+}
+.carta .carta__category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #0000EE;
+  padding: 5px 7px 0;
+}
+.carta .carta__category.card__category:hover {
+  cursor: pointer;
+}
+.carta .carta__heading {
+  color: #377fd9;
+  padding: 7px;
+}
+.carta .carta__heading.carta__heading:hover {
+  cursor: pointer;
+}
+
+.hero {
+  background-image: url(../img/hero1.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: #FAFAFA;
+}
+
+.contenedor {
+  width: 80%;
+  margin: 190px auto;
+}
+
+.novedades {
+  width: 80%;
+  margin: 100px auto;
+}
+.novedades h2 {
+  margin-bottom: 100px;
+  text-transform: uppercase;
+}
+.novedades h3 {
+  padding: 20px 0;
+}
+
+.productos {
+  background: rgb(55, 127, 217);
+  background: linear-gradient(184deg, rgb(55, 127, 217) 0%, rgb(0, 107, 179) 78%);
+  padding: 100px 0;
+}
+.productos h2 {
+  margin: 50px 0;
+  color: #FAFAFA;
+  text-transform: uppercase;
+}
+.productos h3 {
+  background-color: #FAFAFA;
+  color: #006bb3;
+  text-transform: uppercase;
+  padding: 10px;
+  display: inline-block;
+  width: 90%;
+  margin: 50px 0;
+  transform: skew(-20deg);
+}
+.productos .card {
+  background: #FAFAFA;
+  margin: 0.4em;
+}
+.productos .card .carta__img {
+  background-color: #FAFAFA;
+}
+.productos .card .carta__category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #0000EE;
+  padding: 5px 7px 0;
+}
+.productos .card .carta__category.card__category:hover {
+  cursor: pointer;
+}
+.productos .card .carta__heading {
+  color: #377fd9;
+  padding: 7px;
+}
+.productos .card .carta__heading.carta__heading:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */
