@@ -10,7 +10,7 @@
 }
 .novedades {
     @include contenedor(100px);
-    h2{
+    h2 {
         margin-bottom: 100px;
         text-transform: uppercase;
     }
@@ -19,25 +19,29 @@
     }
 }
 .productos {
-    background: rgb(55,127,217);
-    background: linear-gradient(184deg, rgba(55,127,217,1) 0%, rgba(0,107,179,1) 78%);
-    padding: 100px 0;
+    background-color: color(textColor);
+    padding-top: 50px;
+    padding-bottom: 100px;
+    bottom: 50px;
     h2 {
-        margin: 50px 0;
         color: color(colorBlanco);
         text-transform: uppercase;
+        padding: 50px;
     }
-    h3 {
-        background-color: color(colorBlanco);
-        color: color(primario);
+    .productos__img {
+        filter: blur(5px);
+        &.productos__img:hover {
+            filter: blur(0);
+        }
+    }
+}
+.form {
+    h2 {
+        color: color(textColor);
         text-transform: uppercase;
-        padding: 10px;
-        display: inline-block;
-        width: 90%;
-        margin: 50px 0;
-        transform: skew(-20deg);
+        margin-top: 50px;
     }
-    .card{
-        @include cardUno;
+    .text-area{
+        resize: none;
     }
 }
