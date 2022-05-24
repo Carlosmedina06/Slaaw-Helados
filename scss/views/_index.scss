@@ -28,12 +28,6 @@
         text-transform: uppercase;
         padding: 50px;
     }
-    .productos__img {
-        filter: blur(5px);
-        &.productos__img:hover {
-            filter: blur(0);
-        }
-    }
 }
 .form {
     h2 {
