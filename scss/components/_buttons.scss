@@ -1,6 +1,9 @@
 .btn-principal {
 @include botonUno
 }
+.btn-arriba{
+    @include btnArriba
+}
 .btn-form{
     @extend .btn-principal
 }
